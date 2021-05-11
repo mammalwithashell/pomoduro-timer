@@ -1,0 +1,30 @@
+<Menu>:
+    GridLayout:
+        cols: 1
+        Label:
+            text: "Pomoduro"
+        Button:
+            text: "Start"
+            on_press: root.to_timer()
+
+<Time>:
+    name: "time"
+    text: "time"
+
+<Timer>:
+    GridLayout:
+        cols: 1
+        Label:
+            text: "Time Remaining"
+        Time:
+            id: time
+        Button:
+            text: "End Timer"
+            on_press: root.to_menu()
+
+
+<Manager>:
+    Menu:
+        name: "menu"
+    Timer:
+        name: "timer"
